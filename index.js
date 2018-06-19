@@ -19,10 +19,10 @@ module.exports = {
       comments: 100
     }],
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single', { 'avoidEscape': true }],
+    'quotes': ['error', 'single', { 'avoidEscape': true }],
     'jsx-quotes': ['error', 'prefer-single'],
     'semi-style': ['error', 'first'],
-    semi: ['error', 'never'],
+    'semi': ['error', 'never'],
     'no-extra-parens': ['error', 'all', {enforceForArrowConditionals: false, 'ignoreJSX': 'multi-line', 'nestedBinaryExpressions': false}],
     'space-before-function-paren': ['error', 'always'],
     'func-style': ['error', 'expression', { 'allowArrowFunctions': true }],
@@ -40,7 +40,6 @@ module.exports = {
       'render',
       'shouldComponentUpdate'
     ]}],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'react/sort-comp': [1, {
       order: [
         'static-methods',
@@ -53,12 +52,23 @@ module.exports = {
         'render',
       ]
     }],
-    'react/boolean-prop-naming': [1, { rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+' }],
+    'react/boolean-prop-naming': [1, { rule: '^(is|has|should)[A-Z]([A-Za-z0-9]?)+' }],
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }],
-    'react/no-deprecated': [1],
+    'react/no-deprecated': 1,
     'react/no-multi-comp': [1, { ignoreStateless: true }],
-    'react/no-access-state-in-setstate': [1],
-    'react/require-default-props': [0],
-    'react/jsx-closing-bracket-location': [1]
+    'react/no-access-state-in-setstate': 1,
+    'react/require-default-props': 0,
+    'react/jsx-closing-bracket-location': 1,
+    'react/jsx-handler-names': [1, { eventHandlerPropPrefix: '(on|handle)' }],
+    'react/jsx-max-props-per-line': 1,
+    'react/jsx-no-bind': [1, {
+      ignoreRefs: true,
+      allowArrowFunctions: false,
+      allowFunctions: false,
+      allowBind: false
+    }],
+    'react/jsx-closing-tag-location': 1,
+    'react/jsx-tag-spacing': [1, { beforeSelfClosing: 'always' }],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }]
   }
 }
