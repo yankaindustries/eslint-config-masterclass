@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     'max-len': ['error', 80, {
       ignoreStrings: true,
+      ignoreTemplateLiterals: true,
       comments: 100
     }],
     'linebreak-style': ['error', 'unix'],
@@ -52,7 +53,7 @@ module.exports = {
         'render',
       ]
     }],
-    'react/boolean-prop-naming': [1, { rule: '^(is|has|should)[A-Z]([A-Za-z0-9]?)+' }],
+    'react/boolean-prop-naming': [1, { rule: '^(is|has|should|can|will)[A-Z]([A-Za-z0-9]?)+' }],
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }],
     'react/no-deprecated': 1,
     'react/no-multi-comp': [1, { ignoreStateless: true }],
@@ -60,7 +61,6 @@ module.exports = {
     'react/require-default-props': 0,
     'react/jsx-closing-bracket-location': 1,
     'react/jsx-handler-names': [1, { eventHandlerPropPrefix: '(on|handle)' }],
-    'react/jsx-max-props-per-line': 1,
     'react/jsx-no-bind': [1, {
       ignoreRefs: true,
       allowArrowFunctions: false,
